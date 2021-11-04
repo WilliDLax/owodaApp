@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "owodaApp", "owodaApp\owodaApp.csproj", "{18C86069-3462-4200-A1FF-3D66216E4431}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18C86069-3462-4200-A1FF-3D66216E4431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18C86069-3462-4200-A1FF-3D66216E4431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18C86069-3462-4200-A1FF-3D66216E4431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18C86069-3462-4200-A1FF-3D66216E4431}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0D8D2F8-69BA-4D00-91F8-10A4A60A243F}
+	EndGlobalSection
+EndGlobal
