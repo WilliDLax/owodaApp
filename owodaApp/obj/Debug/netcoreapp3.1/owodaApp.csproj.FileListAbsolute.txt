@@ -1,0 +1,13 @@
+/Users/wemabank/Projects/owodaApp/owodaApp/bin/Debug/netcoreapp3.1/owodaApp.deps.json
+/Users/wemabank/Projects/owodaApp/owodaApp/bin/Debug/netcoreapp3.1/owodaApp.runtimeconfig.json
+/Users/wemabank/Projects/owodaApp/owodaApp/bin/Debug/netcoreapp3.1/owodaApp.runtimeconfig.dev.json
+/Users/wemabank/Projects/owodaApp/owodaApp/bin/Debug/netcoreapp3.1/owodaApp.dll
+/Users/wemabank/Projects/owodaApp/owodaApp/bin/Debug/netcoreapp3.1/owodaApp.pdb
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.csproj.AssemblyReference.cache
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.AssemblyInfoInputs.cache
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.AssemblyInfo.cs
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.csproj.CoreCompileInputs.cache
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.dll
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.pdb
+/Users/wemabank/Projects/owodaApp/owodaApp/obj/Debug/netcoreapp3.1/owodaApp.genruntimeconfig.cache
