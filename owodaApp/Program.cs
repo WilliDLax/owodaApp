@@ -5,8 +5,7 @@ namespace owodaApp
     class Program
     {
         static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        { 
             Owoda musa = new Owoda();
             musa.ChooseOperation();
         }
@@ -31,12 +30,15 @@ namespace owodaApp
         {
             Console.WriteLine("Choose an operation: \n1. Sell ticket \n2. Check daily summary");
             int answerIndex = int.Parse(Console.ReadLine());
+            Console.Clear();
 
             while(answerIndex == 1)
             {
                 SellTicket();
                 Console.WriteLine("Choose an operation: \n1. Sell ticket \n2. Check daily summary");
                 answerIndex = int.Parse(Console.ReadLine());
+                Console.Clear();
+
 
                 DailyTicketsSold++;
             }
@@ -45,34 +47,73 @@ namespace owodaApp
 
         public void SellTicket()
         {
-            Random ticketId = new Random();
-
             double ticketPrice;
-            Console.WriteLine("Choose a ticket type: \n1. Daily \n2.Monthly");
+            Console.WriteLine("Choose a ticket type: \n1. Daily \n2. Monthly");
             int answerIndex = int.Parse(Console.ReadLine());
-            if(answerIndex == 1)
+            Console.Clear();
+
+
+            if (answerIndex == 1)
             {
                 ticketPrice = TicketPriceDefault;
+                TicketChoice = "daily";
             }
             else
             {
                 ticketPrice = GetMonthlyTicketPrice(TicketPriceDefault);
+                TicketChoice = "monthly";
             }
             totalPriceSold += ticketPrice;
 
-            Console.WriteLine("Ticket Sold succesfully! \nYour id is " + ticketId.Next(10));
+            ShowReceipt();
         }
 
         public void calculateProfit()
         {
-            Console.WriteLine("You sold " + DailyTicketsSold + " tickets today");
+            if (DailyTicketsSold == 0)
+            {
+                Console.WriteLine("You haven't sold any ticket today. Gerrout!");
+            }
+            else
+            {
+                Console.WriteLine("You sold " + DailyTicketsSold + " ticket(s) today");
 
-            double total = totalPriceSold;
-            Console.WriteLine("Total money you made today is " + total);
+                double total = totalPriceSold;
+                Console.WriteLine("Total money you made today is " + total);
 
-            double profit = total - (0.65 * total);
-            Console.WriteLine("Your profit after paying chairman is " + profit);
+                double chairmanShare = 0.65 * total;
+                Console.WriteLine("You will pay chairman " + chairmanShare);
+
+                double profit = total - chairmanShare;
+                Console.WriteLine("Your profit after paying chairman is " + profit);
+            }
         }
 
+
+        //Methods to generate a receipt
+
+        public double getTicketPrice(string ticketType)
+        {
+            if(ticketType == "daily")
+            {
+                return TicketPriceDefault;
+            }
+            else
+            {
+                return GetMonthlyTicketPrice(TicketPriceDefault);
+            }
+        }
+
+        public void ShowReceipt()
+        {
+            Random ticketId = new Random();
+            Console.WriteLine("Ticket sold!");
+            Console.WriteLine("Type:     " + TicketChoice);
+            Console.WriteLine("Cost:     " + getTicketPrice(TicketChoice));
+            Console.WriteLine("Numb:     " + ticketId.Next(0, 999999).ToString("D13"));
+            Console.WriteLine("Sold on:        " + DateTime.Now.ToString("MM/dd/yyyy H:mm"));
+            Console.WriteLine("-----------------------------------------------");
+
+        }
     }
 }
