@@ -21,11 +21,13 @@ namespace owodaApp
         public double totalPriceSold = 0.00;
         public double TicketPriceDefault = 100;
 
+        //caculate price for monthly tickets
         public double GetMonthlyTicketPrice(double ticketPrice)
         {
             return (ticketPrice / 2) * 30;
         }
 
+        //choose whether to sell a ticket or check your summary 
         public void ChooseOperation()
         {
             Console.WriteLine("Choose an operation: \n1. Sell ticket \n2. Check daily summary");
@@ -45,6 +47,7 @@ namespace owodaApp
             calculateProfit();
         }
 
+        //sell the ticket
         public void SellTicket()
         {
             double ticketPrice;
@@ -68,6 +71,7 @@ namespace owodaApp
             ShowReceipt();
         }
 
+        //calculate earnings
         public void calculateProfit()
         {
             if (DailyTicketsSold == 0)
